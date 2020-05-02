@@ -1,0 +1,237 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view_controller.HR.OWNER.Hr_myhotel"
+    >
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Highest Price: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <EditText
+                    android:id="@+id/highest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="Enter your highest price"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+            </LinearLayout>
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/lukou_str"
+                android:background="@color/divider_line_color" />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Lowest price: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <EditText
+                    android:id="@+id/lowest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="Enter your lowest price"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+            </LinearLayout>
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/lukou_str"
+                android:background="@color/divider_line_color" />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Key words (hotel name): "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <EditText
+                    android:id="@+id/key"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="Enter your key words"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/search_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/deny_style_button_bkg"
+                android:text="Search"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/submit_container">
+
+                </ScrollView>
+
+                <ListView
+                    android:id="@+id/lists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_main_radio"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+
+        <RadioGroup
+            android:id="@+id/cusmain"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--            <RadioButton-->
+            <!--                android:id="@+id/owner_order"-->
+            <!--                style="@style/rb_style"-->
+            <!--                android:checked="true"-->
+            <!--                android:drawableTop="@drawable/vector_drawable_order"-->
+            <!--                android:text="@string/app_name"/>-->
+
+            <!--            <RadioButton-->
+            <!--                android:id="@+id/owner_setting"-->
+            <!--                style="@style/rb_style"-->
+            <!--                android:drawableTop="@drawable/vector_drawable_mine_1"-->
+
+            <!--                android:text="@string/app_name"/>-->
+
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/hr_cus_hotel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/vector_drawable_bin"
+                android:text="Hotels"/>
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/hr_cus_mine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/vector_drawable_mine_1"
+                android:text="Mine"/>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

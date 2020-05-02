@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/template_divider_height"
+        android:layout_below="@id/luduan_str"
+        android:background="@color/divider_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+
+            android:text="Customer:"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/cus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="name1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18dp" />
+
+        <View
+
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+
+            android:text="Room Type:"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/Type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="Single"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18dp"/>
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_edit"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/submit_style_button_bkg"-->
+        <!--            android:text="Edit"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_delete"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/deny_style_button_bkg"-->
+        <!--            android:text="Delete"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+
+            android:text="Dated Time:"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/order_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="day1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_edit"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/submit_style_button_bkg"-->
+        <!--            android:text="Edit"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_delete"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/deny_style_button_bkg"-->
+        <!--            android:text="Delete"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+
+            android:text="Number of Rooms:"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/num_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="22dp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_edit"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/submit_style_button_bkg"-->
+        <!--            android:text="Edit"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_delete"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/deny_style_button_bkg"-->
+        <!--            android:text="Delete"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+
+            android:text="Order Made Time:"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/order_made_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="day2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18dp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_edit"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/submit_style_button_bkg"-->
+        <!--            android:text="Edit"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_delete"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/deny_style_button_bkg"-->
+        <!--            android:text="Delete"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+
+            android:text="Price:"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="22dp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_edit"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/submit_style_button_bkg"-->
+        <!--            android:text="Edit"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/room_delete"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/deny_style_button_bkg"-->
+        <!--            android:text="Delete"-->
+
+        <!--            android:textColor="@color/white" />-->
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<androidx.viewpager.widget.ViewPager
+    android:id="@+id/vpimg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+
+
+
+
+
+
+</androidx.viewpager.widget.ViewPager>
+
+
+    <com.concretejungle.picgallery.BannerIndicator
+        android:id="@+id/indicators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal" />
+
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/plateform_item_height"
+        android:layout_gravity="top"
+        android:background="@null"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../compoundPicker/compoundPicker.iml" filepath="$PROJECT_DIR$/../compoundPicker/compoundPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpRequest.iml" filepath="$PROJECT_DIR$/httpRequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../parkeSystem.iml" filepath="$PROJECT_DIR$/../parkeSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../picGallery/picGallery.iml" filepath="$PROJECT_DIR$/../picGallery/picGallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../qrScan/qrScan.iml" filepath="$PROJECT_DIR$/../qrScan/qrScan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../qrencoder/qrencoder.iml" filepath="$PROJECT_DIR$/../qrencoder/qrencoder.iml" />
+    </modules>
+  </component>
+</project>

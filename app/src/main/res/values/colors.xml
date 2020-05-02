@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3485FF</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_primary_blue">#3485FF</color>
+    <color name="divider_line_color">#def2f2f2</color>
+    <color name="dark_divider_line_color">#decfcfcf</color>
+    <color name="bkg_gray">#d9d9d9</color>
+    <color name="tip_color">#cfcfcd</color>
+
+    <!--base_color-->
+    <color name="white">#ffffff</color>
+    <color name="yellow_white">#f8fffefb</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#2d2d2d</color>
+
+    <!--dialog_utils-->
+    <color name="dialog_backgrounf">#a4313131</color>
+    <color name="progress_gray">#aea6a6</color>
+
+    <!--Amap-->
+    <color name="fill">#3376d4f3</color>
+    <color name="stroke">#cc3f91fc</color>
+
+    <!--ac_function-->
+    <color name="shiny_gray">#e3f1f1f1</color>
+
+    <!--car_status-->
+    <color name="car_approval">#f720d483</color>
+
+    <!--color_status-->
+    <color name="zero">#006400</color>
+    <color name="one">#008B45</color>
+    <color name="two">#00BFFF</color>
+    <color name="three">#00CDCD</color>
+    <color name="four">#00EE76</color>
+    <color name="five">#00FF00</color>
+    <color name="six">#98FB98</color>
+    <color name="seven">#9AC0CD</color>
+    <color name="eight">#9BCD9B</color>
+    <color name="nine">#9FB6CD</color>
+    <color name="ten">#A2B5CD</color>
+    <color name="ele">#A52A2A</color>
+    <color name="twe">#AAAAAA</color>
+    <color name="thir">#CD6839</color>
+    <color name="fourt">#CD8162</color>
+    <color name="fift">#CD919E</color>
+    <color name="sixt">#CD9B9B</color>
+    <color name="sevt">#CDB38B</color>
+    <color name="eighte">#CDBA96</color>
+
+    <!--dialogUtils2-->
+    <color name="med_color_primary">#3574bd</color>
+    <color name="divider_color">#f4f3f3</color>
+    <color name="red">#ff0000</color>
+
+    <!--Ac_filter-->
+    <color name="tab_bkg_color">#e9eef1f4</color>
+
+    <!--google_four_color-->
+    <color name="google_color_one">#3369e8</color>
+    <color name="google_color_two">#569925</color>
+    <color name="google_color_three">#d50f25</color>
+    <color name="google_color_four">#eeb211</color>
+
+    <color name="light_google_color_one">#ceb8c3dc</color>
+    <color name="light_google_color_two">#c6c9deba</color>
+
+    <!--Ac_setting-->
+    <color name="create_unclicked_button">#3874DF</color>
+    <color name="create_clicked_button">#FFEB3B</color>
+
+    <!--drag2Refresh-->
+    <color name="loadingcolor">#e8e8e8</color>
+
+    <!--SpinButton-->
+    <color name="gray_back_screen">#efeeee</color>
+    <color name="recycler_selected_item">#ded754</color>
+
+    <!--ac_login-->
+    <color name="icon_color">#3369e8</color>
+</resources>

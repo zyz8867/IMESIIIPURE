@@ -1,0 +1,401 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view_controller.HR.OWNER.Hr_myhotel"
+    >
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/submit_container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_centerVertical="true"
+                    android:background="@color/divider_line_color"
+                    android:gravity="center"
+                    android:text="Add a Room"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="25dp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/luduan_str"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+                    android:id="@+id/lukou_str"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/username1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:enabled="false"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lukou_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/hotelname1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:enabled="false"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+                </LinearLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_asterisk" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Price:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/typeprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+android:hint="Enter your price"
+
+                        android:inputType="number"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+                </LinearLayout>
+
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_asterisk" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Type:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/typeroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="Enter your room type"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+                </LinearLayout>
+
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_asterisk" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Description:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/descri"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="Enter your description"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+                </LinearLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_asterisk" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/amountroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="Enter your available room amount"
+                        android:inputType="number"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+                </LinearLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_item_height"
+
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/template_item_padding">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+
+
+                    <EditText
+                        android:id="@+id/description1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:enabled="false"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/template_item_size" />
+                </LinearLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/template_divider_height"
+                    android:layout_below="@id/lukou_str"
+                    android:background="@color/divider_line_color" />
+
+                <Button
+                    android:id="@+id/roomadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/submit_style_button_bkg"
+                    android:text="Add"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_notuse1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+
+                    android:focusableInTouchMode="true"
+
+                    />
+
+                <TextView
+                    android:id="@+id/TEXTVIEW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ListView
+                    android:id="@+id/list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ListView>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

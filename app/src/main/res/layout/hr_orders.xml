@@ -1,0 +1,131 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view_controller.HR.OWNER.Hr_myhotel"
+    >
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:background="@color/divider_line_color"
+                android:gravity="center"
+                android:text="My Hotel Order"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25dp" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/lukou_str"
+                android:background="@color/divider_line_color" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/lukou_str"
+                android:background="@color/divider_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/submit_container">
+
+                </ScrollView>
+
+                <ListView
+                    android:id="@+id/hotel_order_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_main_radio"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp">
+
+        <RadioGroup
+            android:id="@+id/cusmain"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--            <RadioButton-->
+            <!--                android:id="@+id/owner_order"-->
+            <!--                style="@style/rb_style"-->
+            <!--                android:checked="true"-->
+            <!--                android:drawableTop="@drawable/vector_drawable_order"-->
+            <!--                android:text="@string/app_name"/>-->
+
+            <!--            <RadioButton-->
+            <!--                android:id="@+id/owner_setting"-->
+            <!--                style="@style/rb_style"-->
+            <!--                android:drawableTop="@drawable/vector_drawable_mine_1"-->
+
+            <!--                android:text="@string/app_name"/>-->
+
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/hr_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/vector_drawable_order"
+                android:text="Order"/>
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/hr_hotel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/vector_drawable_mine_1"
+                android:text="My Hotel"/>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

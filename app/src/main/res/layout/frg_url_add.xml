@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/template_item_height"
+        android:paddingLeft="@dimen/template_item_padding"
+        android:paddingRight="@dimen/template_item_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="ip地址: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/template_item_size" />
+
+        <EditText
+            android:id="@+id/ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入 "
+            android:textSize="@dimen/template_item_size" />
+    </FrameLayout>
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/template_item_height"
+        android:paddingLeft="@dimen/template_item_padding"
+        android:paddingRight="@dimen/template_item_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="端口号: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/template_item_size" />
+
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入 "
+            android:textSize="@dimen/template_item_size" />
+    </FrameLayout>
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/template_item_height"
+        android:paddingLeft="@dimen/template_item_padding"
+        android:paddingRight="@dimen/template_item_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="描述: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/template_item_size" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入 "
+            android:textSize="@dimen/template_item_size" />
+    </FrameLayout>
+</LinearLayout>

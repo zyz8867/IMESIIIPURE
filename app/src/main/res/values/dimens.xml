@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ac_function-->
+    <dimen name="img_bkg_height">150dp</dimen>
+    <dimen name="banner_height">70dp</dimen>
+    <dimen name="banner_title_height">40dp</dimen>
+
+    <!--ac_record_list-->
+    <dimen name="bar_height">33dp</dimen>
+
+    <!--ac_record_editor-->
+    <dimen name="template_item_height">40dp</dimen>
+    <dimen name="template_divider_height">12dp</dimen>
+    <dimen name="template_cate_height">50dp</dimen>
+    <dimen name="template_item_padding">10dp</dimen>
+
+    <dimen name="template_pic_height">58dp</dimen>
+    <dimen name="template_pic_width">75dp</dimen>
+
+    <dimen name="template_item_detail_padding">3dp</dimen>
+
+    <!--ac_request_detail-->
+    <dimen name="detail_item_padding">5dp</dimen>
+    <dimen name="detail_cate_height">30dp</dimen>
+    <dimen name="detail_frame_padding">10dp</dimen>
+
+    <!--pic_gallery-->
+    <dimen name="plateform_item_height">50dp</dimen>
+
+    <!--ac_search_alt-->
+    <dimen name="input_width">200dp</dimen>
+    <dimen name="input_height">50dp</dimen>
+</resources>

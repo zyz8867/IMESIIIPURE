@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/submit_container"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+
+                android:background="@color/divider_line_color"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="交通事故信息采集" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/luduan_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lukou_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="事故发生路口: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/lukou"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择路口"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"
+                    />
+
+
+                <!--<com.sunland.TrafficAccident.customView.SpinButton-->
+                    <!--android:id="@+id/lukou"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@null"-->
+                    <!--android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"-->
+                    <!--android:gravity="end|center_vertical"-->
+                    <!--android:hint="请选择路口"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/template_item_size" />-->
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lukou_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/lukou_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/luduan_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="事故发生路段: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/luduan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择路段"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"/>
+
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/luduan_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/luduan_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/address_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+                android:layout_below="@+id/car_frame_d"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address_str"
+                    android:layout_gravity="center_vertical"
+                    android:text="事故发生位置描述: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+                <EditText
+                    android:id="@+id/address2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/address_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/address"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/daolutiaojian_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="道路条件: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/daolutiaojian"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择道路条件"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"
+
+
+                    />
+
+
+                <!--<com.sunland.TrafficAccident.customView.SpinButton-->
+                    <!--android:id="@+id/daolutiaojian"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@null"-->
+                    <!--android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"-->
+                    <!--android:gravity="end|center_vertical"-->
+                    <!--android:hint="请选择道路条件"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/template_item_size" />-->
+            </LinearLayout>
+
+            <View
+                android:id="@+id/daolutiaojian_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/daolutiaojian_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/daolu_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+                android:layout_below="@+id/car_frame_d"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/daolu_str"
+                    android:layout_gravity="center_vertical"
+                    android:text="道路条件描述: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/address_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/address"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/zhaoming_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="照明条件: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/zhaoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择照明条件"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"
+                    />
+
+
+                <!--<com.sunland.TrafficAccident.customView.SpinButton-->
+                    <!--android:id="@+id/zhaoming"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@null"-->
+                    <!--android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"-->
+                    <!--android:gravity="end|center_vertical"-->
+                    <!--android:hint="请选择照明条件"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/template_item_size" />-->
+            </LinearLayout>
+
+            <View
+                android:id="@+id/zhaoming_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/zhaoming_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/biaozhibiaoxian_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="标志标线: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <Button
+                    android:id="@+id/biaozhibiaoxian"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择标志标线"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <!--<com.sunland.TrafficAccident.customView.SpinButton-->
+                    <!--android:id="@+id/biaozhibiaoxian"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@null"-->
+                    <!--android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"-->
+                    <!--android:gravity="end|center_vertical"-->
+                    <!--android:hint="请选择标志标线"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/template_item_size" />-->
+            </LinearLayout>
+
+            <View
+                android:id="@+id/biaozhibiaoxian_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/biaozhibiaoxian_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/chesun_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="车损情况: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/chesun"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择车损情况"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"
+                    />
+
+
+                <!--<com.sunland.TrafficAccident.customView.SpinButton-->
+                    <!--android:id="@+id/chesun"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@null"-->
+                    <!--android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"-->
+                    <!--android:gravity="end|center_vertical"-->
+                    <!--android:hint="请选择车损情况"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/template_item_size" />-->
+            </LinearLayout>
+
+            <View
+                android:id="@+id/chesun_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/chesun_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/message_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+                android:layout_below="@+id/car_frame_d"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/message_str"
+                    android:layout_gravity="center_vertical"
+                    android:text="其他信息描述: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+                <EditText
+                    android:id="@+id/message1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/message_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/message_str"
+                android:background="@color/divider_line_color" />
+
+
+
+            <LinearLayout
+                android:id="@+id/shigu_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/daolu_str"
+                    android:layout_gravity="center_vertical"
+                    android:text="事故编号: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+
+                <EditText
+                    android:id="@+id/shigu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/shigu_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/shigu_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/shiguxianchang_str"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_item_height"
+
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/template_item_padding">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asterisk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="事故现场拍照: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/shiguxianchang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="end|center_vertical"
+                    android:hint="请选择事故现场拍照"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size"
+                    />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/shiguxianchang_d"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/template_divider_height"
+                android:layout_below="@id/shiguxianchang_str"
+                android:background="@color/divider_line_color" />
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/pics_str"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_d"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/template_item_padding"
+                    android:paddingTop="@dimen/template_item_padding"
+                    android:text="照片"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/template_item_size" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp" />
+
+        </LinearLayout>
+
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alert_dialog_button_height_size"
+                android:layout_below="@id/shiguxianchang_str"
+                android:background="@color/divider_line_color" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/submit_container"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentBottom="true">
+
+
+
+        <Button
+            android:id="@+id/hotel_submit1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/submit_style_button_bkg"
+            android:text="提 交"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+</RelativeLayout>

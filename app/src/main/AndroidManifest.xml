@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sunland.TrafficAccident">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+
+    <uses-permission android:name="cybertech.pstore.permission.APP" />
+    <!-- <uses-permission android:name="cybertech.pstore.permission.COMPONENT" /> -->
+    <uses-permission android:name="cybertech.permission.READ_PSTORE" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_USERINFO" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LINKINFO" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LOCATIONINFO" />
+    <uses-permission android:name="cybertech.permission.WRITE_PSTORE_OPERATIONLOG" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LAUNCHERGROUPS" />
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_SERVER_SYNC_TIME" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+
+
+    <application
+
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+
+        <activity android:name=".view_controller.Ac_base" />
+
+
+        <activity android:name=".view_controller.Ac_login" />
+
+
+
+        <activity android:name=".view_controller.HR.Hr_login" />
+
+        <activity android:name=".view_controller.HR.Hr_pre_register" />
+
+        <activity android:name=".view_controller.HR.Hr_register" />
+
+        <activity android:name=".view_controller.HR.OWNER.Hr_myhotel" />
+
+        <activity android:name=".view_controller.HR.OWNER.Hr_orders" />
+
+        <activity android:name=".view_controller.HR.OWNER.Hr_room" />
+
+        <activity android:name=".view_controller.HR.OWNER.Hr_editroom" />
+
+        <activity android:name=".view_controller.HR.OWNER.Hr_addroom" />
+
+
+
+        <activity android:name=".view_controller.HR.CUSTOMER.Hr_hotels" />
+
+        <activity android:name=".view_controller.HR.CUSTOMER.Hr_mine" />
+
+        <activity android:name=".view_controller.HR.CUSTOMER.Hr_mineorder" />
+
+
+
+
+        <activity
+            android:name=".view_controller.Ac_splash"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sunland.TrafficAccident"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name = "android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/accident_pic_path"
+               />
+
+        </provider>
+
+
+    </application>
+
+
+
+
+
+</manifest>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@drawable/filter_item_bkg"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text=" REGISTER YOUR ACCOUNT:"
+                android:textSize="28dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="       Choose your identity"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/empty" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/hotelowner"
+            android:layout_width="wrap_content"
+            android:layout_height="138dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle"
+
+            android:text="I'm a Hotel Owner" />
+
+        <Button
+            android:id="@+id/customer"
+            android:layout_width="wrap_content"
+            android:layout_height="142dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle"
+
+            android:text="I'm a customer" />
+    </LinearLayout>
+</LinearLayout>

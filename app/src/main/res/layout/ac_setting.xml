@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/current_url_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/template_item_height"
+        android:paddingLeft="@dimen/template_item_padding"
+        android:paddingRight="@dimen/template_item_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="当前链路: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/template_item_size" />
+
+        <TextView
+            android:id="@+id/current_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="right"
+            android:textSize="@dimen/template_item_size" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider_line_color" />
+
+    <FrameLayout
+        android:id="@+id/record_id_str"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/template_item_padding"
+        android:paddingRight="@dimen/template_item_padding">
+
+        <TextView
+            android:id="@+id/create_url"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="新链路"
+
+            android:textSize="@dimen/template_item_size" />
+
+
+    </FrameLayout>
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/url_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:overScrollMode="never"
+      android:padding="@dimen/template_item_padding" ></androidx.recyclerview.widget.RecyclerView>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+       <!--/>-->
+
+</LinearLayout>

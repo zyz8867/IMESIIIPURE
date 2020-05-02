@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_level_one">21dp</dimen>
+
+    <!--police_module-->
+    <dimen name="banner_text_size">20sp</dimen>
+    <dimen name="module_text_size">13sp</dimen>
+    <dimen name="banner_title_size">14sp</dimen>
+    <dimen name="banner_content_size">13sp</dimen>
+    <dimen name="top_banner_title_size">18sp</dimen>
+
+    <dimen name="list_tile">16sp</dimen>
+    <dimen name="list_detail">13sp</dimen>
+    <dimen name="list_status_size">15sp</dimen>
+    <dimen name="list_progress_size">18sp</dimen>
+    <dimen name="search_bar_size">12sp</dimen>
+
+    <dimen name="template_item_size">15sp</dimen>
+
+    <dimen name="bottom_bar_text_size">12sp</dimen>
+    <dimen name="enter_text_size">14sp</dimen>
+    <dimen name="filter_tab_text_size">12sp</dimen>
+
+    <dimen name="search_input_text_size">15sp</dimen>
+
+</resources>
