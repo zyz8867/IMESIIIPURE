@@ -97,33 +97,54 @@ public class Util {
     }
 
     public static ArrayList like_list(Connection conn, String username) {
-        ArrayList<String> like = new ArrayList<String>();
-
+        ArrayList<ArrayList<String>> room_info = new ArrayList<ArrayList<String>>();
+        ArrayList<String> data;
         if (conn == null) {
-            return like;
+            return null;
         }
 
         Statement statement = null;
         ResultSet result = null;
         try {
-
             statement = conn.createStatement();
-            String sql_query = "select * from likelist where username=\'" + username + "\';";
+            String sql_query = "SELECT room.username,room.hotel_name, hotel.country, hotel.province, hotel.city, hotel.street, hotel.description, room.room, room.price, room.amount, room.description FROM  likelist, room, hotel where  CONVERT(likelist.hotel_name USING utf8) COLLATE utf8_unicode_ci = hotel.hotel_name and CONVERT(likelist.room_type USING utf8) COLLATE utf8_unicode_ci=room.room and hotel.username=room.username and likelist.username=\'"+username+"\';";
             result = statement.executeQuery(sql_query);
             if(result != null){
                 result.next();
-                int hotelColumnIndex = result.findColumn("hotel_name");
+                int usernameColumnIndex = result.findColumn("username");
+                int hotel_nameColumnIndex = result.findColumn("hotel_name");
+                int countryColumnIndex = result.findColumn("country");
+                int provinceColumnIndex = result.findColumn("province");
+                int cityColumnIndex = result.findColumn("city");
+                int streetColumnIndex = result.findColumn("street");
+                int hotel_descriptionColumnIndex = result.findColumn("hotel.description");
+                int roomColumnIndex = result.findColumn("room");
+                int priceColumnIndex = result.findColumn("price");
+                int amountColumnIndex = result.findColumn("amount");
+                int room_descriptionColumnIndex = result.findColumn("room.description");
                 while (!result.isAfterLast()) {
-                    String hotel = result.getString(hotelColumnIndex);
-                    like.add(hotel);
+                    data = new ArrayList<>();
+                    data.add(result.getString(usernameColumnIndex));
+                    data.add(result.getString(hotel_nameColumnIndex));
+                    data.add(result.getString(countryColumnIndex));
+                    data.add(result.getString(provinceColumnIndex));
+                    data.add(result.getString(cityColumnIndex));
+                    data.add(result.getString(streetColumnIndex));
+                    data.add(result.getString(hotel_descriptionColumnIndex));
+                    data.add(result.getString(roomColumnIndex));
+                    data.add(result.getString(priceColumnIndex));
+                    data.add(result.getString(amountColumnIndex));
+                    data.add(result.getString(room_descriptionColumnIndex));
+                    room_info.add(data);
                     result.next();
                 }
             }else {
-                System.out.println("No result");
+                room_info = null;
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
+            room_info = null;
         } finally {
             try {
                 if (result != null) {
@@ -140,16 +161,17 @@ public class Util {
 
             }
         }
-        return like;
+        return room_info;
     }
 
-    public static int add_into_like_list(Connection conn, String username, String hotel_name) {
-        String sql = "insert into likelist (hotel_name, username) values (\'" +hotel_name+ "\', \'"+username +"\');";
+    public static int add_into_like_list(Connection conn, String username, String hotel_name, String room_type) {
+        String sql = "insert into likelist (hotel_name, room_type, username) select \'"+hotel_name+"\', \'"+room_type+"\', \'"+username+"\' from dual where not exists ( select * from likelist where likelist.hotel_name= \'"+hotel_name+"\'AND room_type= \'"+room_type+"\' AND username =\'"+username+"\')";
+
         return operation(conn, sql);
     }
 
-    public static int delete_from_like_list(Connection conn, String username, String hotel_name) {
-        String sql = "delete from likelist where hotel_name=\'" +hotel_name+ "\'AND username=\'"+username + "\';";
+    public static int delete_from_like_list(Connection conn, String username, String hotel_name, String room_type) {
+        String sql = "delete from likelist where hotel_name=\'" +hotel_name+ "\'AND username=\'"+username + "\' AND room_type =\'"+room_type+"\';";
         return operation(conn, sql);
     }
 
@@ -290,6 +312,10 @@ public class Util {
 
     public static int add_room(Connection conn, String username, String hotel_name, String room, int price, int amount, String description) {
         String sql = "insert into room(username, hotel_name, room, price, amount, description) values ('"+username+"','" + hotel_name+"','" + room +"',"+ price + ","+ amount +", '"+description+"');";
+
+
+
+
         return operation(conn, sql);
     }
 

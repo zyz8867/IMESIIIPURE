@@ -108,7 +108,7 @@ public class Hr_mineorder  extends Ac_base_query implements Frg_dialog.Callback{
     private void Handle_hotel(int i){
         //0：编辑成功，1：连接错误，2：格式错误
         if(i == 0){
-            Toast.makeText(getApplicationContext(), "Ordered Succeccfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Succeccfully", Toast.LENGTH_SHORT).show();
 
         }
         else if(i == 1){
@@ -160,6 +160,48 @@ public class Hr_mineorder  extends Ac_base_query implements Frg_dialog.Callback{
                                             Integer.parseInt(number.getText().toString()), spend);
                                // 0：下单成功，，1：连接错误，2：格式错误 3：剩余房间不足
                                         mHandler.sendEmptyMessage(i);
+
+
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    });
+                    thread.start();
+                }
+            }, 1200);
+
+        }
+
+        else if(i == 99){
+
+            dialogUtils.showDialog(Hr_mineorder.this, "Like", DialogUtils.TYPE_PROGRESS, new DialogUtils.OnCancelClickListener() {
+                @Override
+                public void onCancel() {
+                    //mRequestManager.cancelAll();
+                    dialogUtils.dialogDismiss();
+                }
+            }, null);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    dialogUtils.dialogDismiss();
+
+
+                    Thread thread = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+
+                                Connection conn;
+                                conn = Util.openConnection(URL, USER, PASSWORD);
+
+                                int i = Util.add_into_like_list(conn,username, HOTELNAME,ROOMTYPE);
+                                // 0：收藏成功，1：连接错误
+                                mHandler.sendEmptyMessage(i);
 
 
 
@@ -227,8 +269,9 @@ public class Hr_mineorder  extends Ac_base_query implements Frg_dialog.Callback{
                 finish();
             }else if(checkedId==R.id.hr_cus_mine)
             {
-
-                // hopToActivity(Hr_myhotel.class);
+                Bundle bundle1 = new Bundle();  //得到bundle对象
+                bundle.putString("username", username);
+                hopToActivity(Hr_mine.class, bundle1);
                 //finish();
             }
 
@@ -308,6 +351,20 @@ public class Hr_mineorder  extends Ac_base_query implements Frg_dialog.Callback{
 
     }
 
+
+    @OnClick({R.id.Add_Likelist})
+    public void Add_Likelist_onClick(View view) {
+
+        int id = view.getId();
+        switch (id) {
+            case R.id.Add_Likelist:
+                mHandler.sendEmptyMessage(99);
+
+
+        }
+
+
+    }
 
     private void initView(){
 

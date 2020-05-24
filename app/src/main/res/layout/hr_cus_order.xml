@@ -486,6 +486,18 @@
                 android:layout_below="@id/lukou_str"
                 android:background="@color/divider_line_color" />
 
+            <Button
+                android:id="@+id/Add_Likelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/deny_style_button_bkg"
+                android:text="LIKE"
+                android:textColor="@color/white" />
+
             <View
 
                 android:id="@+id/view15"
@@ -503,7 +515,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="6dp"
                 android:background="@drawable/deny_style_button_bkg"
-                android:text="Search"
+                android:text="MAKE ORDER"
                 android:textColor="@color/white" />
 
         </LinearLayout>

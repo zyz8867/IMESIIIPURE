@@ -227,9 +227,10 @@ public class Hr_hotels  extends Ac_base_query implements Frg_dialog.Callback{
                 //Toast.makeText(getApplicationContext(), "恭喜您,选择正确!",Toast.LENGTH_LONG).show();
             }else if(checkedId==R.id.hr_cus_mine)
             {
-
-                // hopToActivity(Hr_myhotel.class);
-                //finish();
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("username", username);
+                hopToActivity(Hr_mine.class, bundle1);
+                finish();
             }
 
         });
@@ -257,6 +258,7 @@ public class Hr_hotels  extends Ac_base_query implements Frg_dialog.Callback{
 
 
                 mHandler.sendEmptyMessage(99);
+
 
 
 
@@ -321,8 +323,6 @@ public class Hr_hotels  extends Ac_base_query implements Frg_dialog.Callback{
         }
 
     }
-
-
 
 
 
